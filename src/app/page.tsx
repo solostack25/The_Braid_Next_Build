@@ -70,10 +70,13 @@ export default function Home() {
             <img
               src={homePhoto.src}
               alt={homePhoto.alt}
+              data-cc-image={homePhoto.alt}
               style={{ aspectRatio: "4 / 3", width: "100%", objectFit: "cover", borderRadius: 20 }}
             />
           ) : (
             <div
+              data-cc-image={homePhoto.alt}
+              data-cc-image-label=""
               style={{
                 aspectRatio: "4 / 3",
                 borderRadius: 20,
