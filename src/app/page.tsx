@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { DonateWidget } from "@/components/DonateWidget";
 import { ProgramCard } from "@/components/ProgramCard";
-import { partners, programs, stats, strands } from "@/content/site";
+import { homePhoto, partners, programs, stats, strands } from "@/content/site";
 
 export default function Home() {
   return (
@@ -65,23 +65,32 @@ export default function Home() {
 
       <section style={{ background: "var(--white)", borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)" }}>
         <div className="wrap section split">
-          <div
-            style={{
-              aspectRatio: "4 / 3",
-              borderRadius: 20,
-              background: "#eaebd9",
-              border: "2px dashed var(--sage)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: 24,
-              textAlign: "center",
-              color: "var(--olive)",
-              fontWeight: 500,
-            }}
-          >
-            [Photo: the residence at 1389 N Tamiami Trail — residents or staff, with consent]
-          </div>
+          {homePhoto.src ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={homePhoto.src}
+              alt={homePhoto.alt}
+              style={{ aspectRatio: "4 / 3", width: "100%", objectFit: "cover", borderRadius: 20 }}
+            />
+          ) : (
+            <div
+              style={{
+                aspectRatio: "4 / 3",
+                borderRadius: 20,
+                background: "#eaebd9",
+                border: "2px dashed var(--sage)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: 24,
+                textAlign: "center",
+                color: "var(--olive)",
+                fontWeight: 500,
+              }}
+            >
+              [Photo: the residence at 1389 N Tamiami Trail — residents or staff, with consent]
+            </div>
+          )}
           <div className="stack" style={{ gap: 24 }}>
             <span className="eyebrow">Why a braid</span>
             <h2 className="h2">One strand frays. Three hold.</h2>

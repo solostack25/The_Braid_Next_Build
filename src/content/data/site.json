@@ -57,6 +57,10 @@
       "label": "Support access"
     }
   ],
+  "homePhoto": {
+    "src": "",
+    "alt": "The Braid's residence at 1389 N Tamiami Trail"
+  },
   "strands": [
     {
       "name": "Rest",

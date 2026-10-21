@@ -9,6 +9,9 @@ import data from "./data/site.json";
 
 export const site = data.site;
 
+/** Homepage photo beside "One strand frays". Empty src shows a placeholder. */
+export const homePhoto = data.homePhoto;
+
 export const nav = data.nav;
 
 export const stats = data.stats;
