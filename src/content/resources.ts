@@ -1,61 +1,9 @@
 /** Mirrors thebraidinc.org/resources (October 2026). Check numbers yearly. */
 
+// Editable in the SoloStack Command Center: the values below live in
+// src/content/data/resources.json. Keep types and helpers here.
+import data from "./data/resources.json";
+
 export type Resource = { name: string; phone?: string; tel?: string; url?: string; text: string };
 
-export const resourceGroups: { title: string; items: Resource[] }[] = [
-  {
-    title: "Crisis lines (24/7)",
-    items: [
-      { name: "Emergency", phone: "911", tel: "911", text: "If you or someone else is in immediate danger." },
-      { name: "Suicide & Crisis Lifeline", phone: "988", tel: "988", text: "Call or text for suicide prevention and crisis support." },
-      { name: "Crisis Text Line", phone: "Text HOME to 741741", text: "Free text-based crisis support." },
-      { name: "SAMHSA National Helpline", phone: "1-800-662-4357", tel: "18006624357", url: "https://www.samhsa.gov/find-help/national-helpline", text: "Free, confidential treatment referrals and information." },
-      { name: "Lee County Crisis Line", phone: "(239) 275-4242", tel: "2392754242", text: "Local mental health and crisis intervention." },
-      { name: "National Domestic Violence Hotline", phone: "1-800-799-7233", tel: "18007997233", url: "https://www.thehotline.org", text: "Confidential support, 24/7. Text START to 88788." },
-      { name: "National Human Trafficking Hotline", phone: "1-888-373-7888", tel: "18883737888", url: "https://humantraffickinghotline.org", text: "Report a tip or get help. Text 233733." },
-    ],
-  },
-  {
-    title: "Fort Myers & Lee County",
-    items: [
-      { name: "Lee County Homeless Coalition", phone: "(239) 322-6009", tel: "2393226009", url: "https://leehomeless.org/", text: "Coordinates homeless services and referrals to treatment." },
-      { name: "Salvation Army, Fort Myers", phone: "(239) 278-1551", tel: "2392781551", url: "https://southernusa.salvationarmy.org/", text: "Emergency aid, recovery programs and transitional housing." },
-      { name: "United Way 211, Lee County", phone: "Dial 211", tel: "211", url: "https://www.211.org/", text: "24/7 helpline for local services, including treatment and housing." },
-      { name: "Lee Health Behavioral Health", phone: "(239) 343-2000", tel: "2393432000", url: "https://www.leehealth.org/", text: "Hospital-based addiction medicine, detox and outpatient care." },
-      { name: "David Lawrence Center", phone: "(239) 455-8500", tel: "2394558500", url: "https://www.davidlawrencecenter.org/", text: "Substance use and mental health services." },
-      { name: "SalusCare", phone: "(239) 275-3222", tel: "2392753222", url: "https://saluscare.org/", text: "Behavioral health care in Lee, Hendry and Glades counties." },
-      { name: "Florida Recovery Center", phone: "(239) 332-2335", tel: "2393322335", text: "Faith-based residential and outpatient treatment in Fort Myers." },
-    ],
-  },
-  {
-    title: "Treatment & programs",
-    items: [
-      { name: "FindTreatment.gov", url: "https://findtreatment.gov/", text: "Official search tool for treatment facilities, including low-cost options." },
-      { name: "Florida Department of Children & Families", phone: "1-866-308-2520", tel: "18663082520", url: "https://www.myflfamilies.com/service-programs/substance-abuse/", text: "State-funded programs, including for uninsured and low-income residents." },
-      { name: "Partnership to End Addiction", phone: "1-855-378-4373", tel: "18553784373", url: "https://drugfree.org/", text: "Support for families, including a parent helpline." },
-      { name: "NCADD", phone: "1-800-622-2255", tel: "18006222255", url: "https://www.ncadd.org/", text: "Education and help for alcohol addiction and families." },
-      { name: "Hazelden Betty Ford Foundation", phone: "1-866-831-5700", tel: "18668315700", url: "https://www.hazeldenbettyford.org/", text: "Nonprofit provider of evidence-based addiction treatment." },
-      { name: "Phoenix House", phone: "1-888-671-9392", tel: "18886719392", url: "https://www.phoenixhouse.org/", text: "Residential, outpatient and transitional housing programs." },
-    ],
-  },
-  {
-    title: "Free support groups",
-    items: [
-      { name: "Alcoholics Anonymous", phone: "(239) 936-1634", tel: "2399361634", url: "https://www.aa.org/find-aa", text: "Lee County line. The original 12-step program." },
-      { name: "Narcotics Anonymous", phone: "1-888-811-3887", tel: "18888113887", url: "https://www.na.org/meetingsearch/", text: "Florida regional line. 12-step fellowship for drug recovery." },
-      { name: "SMART Recovery", url: "https://www.smartrecovery.org/community/", text: "Science-based meetings, including daily online meetings." },
-      { name: "Al-Anon & Alateen", phone: "1-888-425-2666", tel: "18884252666", url: "https://al-anon.org/al-anon-meetings/", text: "Support for families and friends; Alateen for young people." },
-      { name: "Celebrate Recovery", url: "https://www.celebraterecovery.com/findacr", text: "Church-based recovery for many kinds of struggles." },
-      { name: "Refuge Recovery", url: "https://refugerecovery.org/meetings", text: "Meditation and mindfulness-based recovery." },
-    ],
-  },
-  {
-    title: "Online",
-    items: [
-      { name: "In The Rooms", url: "https://www.intherooms.com/", text: "Free 24/7 video meetings." },
-      { name: "Rethinking Drinking", url: "https://rethinkingdrinking.niaaa.nih.gov/", text: "NIAAA self-check on drinking patterns." },
-      { name: "I Am Sober", url: "https://www.iamsober.com/", text: "Free app to track sobriety and set goals." },
-      { name: "Sober Grid", url: "https://www.sobergrid.com/", text: "Free peer-support app with a meeting finder." },
-    ],
-  },
-];
+export const resourceGroups: { title: string; items: Resource[] }[] = data.resourceGroups as unknown as { title: string; items: Resource[] }[];

@@ -3,52 +3,19 @@
  * Values in [BRACKETS] are placeholders The Braid still needs to supply.
  */
 
-export const site = {
-  name: "The Braid Inc.",
-  slogan: "Rest • Recover • Rise",
-  city: "Fort Myers, FL",
-  /** 24/7 intake line. Not listed on the current site yet. */
-  intakePhone: "[24/7 INTAKE LINE]",
-  intakePhoneHref: "", // e.g. "tel:+12395550100" once known
-  email: "[EMAIL]",
-  ein: "[EIN]",
-  facility: { line1: "1389 N Tamiami Trail", line2: "Fort Myers, FL 33903" },
-  office: { line1: "2031 Jackson Street", line2: "Fort Myers, FL 33901" },
-  /** The Braid's confidential online intake portal (built in Phase 2). */
-  intakePortal: "https://app.thebraidinc.org",
-};
+// Editable in the SoloStack Command Center: the values below live in
+// src/content/data/site.json. Keep types and helpers here.
+import data from "./data/site.json";
 
-export const nav = [
-  { href: "/programs", label: "Programs" },
-  { href: "/about", label: "About" },
-  { href: "/get-help", label: "Get help" },
-  { href: "/resources", label: "Resources" },
-  { href: "/volunteer", label: "Volunteer" },
-];
+export const site = data.site;
 
-export const stats = [
-  { value: "28", label: "Recovery beds" },
-  { value: "14", label: "Private rooms" },
-  { value: "100+", label: "Lives touched" },
-  { value: "24/7", label: "Support access" },
-];
+export const nav = data.nav;
 
-export const strands = [
-  { name: "Rest", text: "Safe, stable, dignified housing", color: "var(--olive)" },
-  { name: "Recover", text: "Healing, case management and support", color: "var(--gold)" },
-  { name: "Rise", text: "Jobs, skills and an empowered future", color: "var(--sage)" },
-];
+export const stats = data.stats;
 
-export const partners = [
-  "United Way Lee County",
-  "Lee County Homeless Coalition",
-  "Lee County Sheriff's Office",
-  "Salvation Army",
-  "State of Florida",
-  "Community Cooperative",
-  "Continuum of Care Lee County",
-  "Galloway Foundation",
-];
+export const strands = data.strands;
+
+export const partners = data.partners;
 
 export type Program = {
   slug: string;
@@ -62,117 +29,11 @@ export type Program = {
   needs?: string[];
 };
 
-export const programs: Program[] = [
-  {
-    slug: "recovery-housing",
-    name: "Recovery Housing & Rapid Re-Housing",
-    status: "Active",
-    icon: "home",
-    tint: "olive",
-    short:
-      "Our 28-bed flagship on N Tamiami Trail, with intensive case management linking residents to healthcare, jobs and education.",
-    body: [
-      "Our flagship program offers safe, dignified transitional housing with wrap-around services. The residence at 1389 N Tamiami Trail has 14 private rooms (28 beds), an auxiliary building with two more bedrooms, a resource center, a food pantry, and outreach and case management offices.",
-      "Placements are coordinated with United Way Lee County, the Lee County Homeless Coalition and the Continuum of Care, with shelter diversion support for people who can stay housed with the right help.",
-    ],
-    services: [
-      "Intake and assessment",
-      "Intensive case management",
-      "Healthcare advocacy",
-      "Help applying for benefits",
-      "Employment readiness",
-      "Life skills training",
-      "Mental health connections",
-      "Transportation assistance",
-      "Financial and digital literacy",
-      "Family strengthening",
-    ],
-  },
-  {
-    slug: "rope-of-allah",
-    name: "Rope of Allah",
-    status: "Active",
-    icon: "link",
-    tint: "gold",
-    short:
-      "Faith-based community engagement — speaker events, interfaith gatherings and the donor family that sustains our work.",
-    body: [
-      "Our faith-based program brings the community into the work: fundraising, speaking at masjids and community centers, national awareness, interfaith dialogue, outreach and education, and building the donor family that keeps our doors open.",
-      "The Rope of Allah stands for divine support and human solidarity. Like everything we do, it serves people of every background with dignity and respect.",
-    ],
-  },
-  {
-    slug: "mobile-health",
-    name: "Mobile Health Clinic",
-    status: "Coming soon",
-    icon: "health",
-    tint: "olive",
-    short:
-      "On-site A1C, cholesterol and blood-pressure testing, nutrition education and diabetic counseling in underserved neighborhoods.",
-    body: [
-      "A mobile clinic that brings care to the parts of Lee County that need it most, so a missed bus or a missed shift doesn't mean a missed diagnosis.",
-    ],
-    services: [
-      "A1C diabetes testing",
-      "Cholesterol and blood pressure screening",
-      "Specialist referrals",
-      "Nutrition and diabetes education",
-      "Heart-healthy programs",
-      "Community health events",
-      "Preventive care education",
-    ],
-    needs: ["Funding", "Healthcare advocacy grants", "Medical equipment donations"],
-  },
-  {
-    slug: "yasamines-place",
-    name: "Yasamine's Place",
-    status: "Coming soon",
-    icon: "baby",
-    tint: "gold",
-    short:
-      "A respite home for single mothers with babies under two facing homelessness — housing, mental-health support and job training.",
-    body: [
-      "A mother-baby home for single mothers with babies under two who face imminent homelessness, and for families at risk of eviction or displacement.",
-    ],
-    services: [
-      "Temporary housing and permanent placement",
-      "Case management",
-      "Mental health groups",
-      "Parenting skills",
-      "Employment training",
-      "Childcare resources",
-      "Benefits support",
-      "Financial literacy",
-    ],
-    needs: [
-      "A property",
-      "Funding and partners",
-      "Baby supplies",
-      "Childcare, lactation and mental health professionals",
-    ],
-  },
-];
+export const programs: Program[] = data.programs as unknown as Program[];
 
-export const values = [
-  { name: "Compassion", text: "We meet everyone with empathy and recognize their inherent dignity and worth." },
-  { name: "Community", text: "Collective support lifts everyone." },
-  { name: "Empowerment", text: "We build capacity and skills for lasting change, not dependency." },
-  { name: "Hope", text: "We believe in human potential and the possibility of transformation." },
-  { name: "Faith", text: "Rooted in a spiritual foundation, we serve all people and honor diverse beliefs." },
-  { name: "Excellence", text: "High-quality services through continuous improvement and evidence-based practice." },
-];
+export const values = data.values;
 
-export const leadership = [
-  { title: "Executive Director", focus: "Leadership and strategy" },
-  { title: "Program Director", focus: "Operations and services" },
-  { title: "Case Manager Lead", focus: "Client services" },
-];
+export const leadership = data.leadership;
 
 /** Donation designations on the Donate page. */
-export const funds = [
-  { id: "housing", name: "Recovery Housing", note: "$35 = one night", color: "#4F5B2A", start: 50 },
-  { id: "rapid", name: "Rapid Re-Housing", note: "Deposits & first month", color: "#C9A646", start: 25 },
-  { id: "health", name: "Mobile Health Clinic", note: "Coming soon", color: "#9CAF6E", start: 0 },
-  { id: "yasamine", name: "Yasamine's Place", note: "Mothers & babies", color: "#C9714A", start: 25 },
-  { id: "need", name: "Where most needed", note: "Our team decides", color: "#7C8466", start: 0 },
-];
+export const funds = data.funds;
