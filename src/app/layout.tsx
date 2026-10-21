@@ -3,6 +3,7 @@ import { Cinzel, Cormorant_Garamond, Inter } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { EscapeShortcut } from "@/components/QuickExit";
+import { PreviewBridge } from "@/components/PreviewBridge";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({ subsets: ["latin"], weight: ["600", "700"], variable: "--font-cormorant" });
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
         <EscapeShortcut />
+        <PreviewBridge />
         <Header />
         <main id="main">{children}</main>
         <Footer />
