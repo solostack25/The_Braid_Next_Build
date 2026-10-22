@@ -19,7 +19,7 @@ export function Header() {
       <div className="crisis-bar">
         <div className="wrap">
           <span>
-            In crisis? Call 911. For a bed tonight call{" "}
+            In crisis? Call 911. For support call{" "}
             {site.intakePhoneHref ? (
               <a href={site.intakePhoneHref} style={{ color: "var(--white)" }}>
                 {site.intakePhone}

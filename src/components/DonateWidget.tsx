@@ -27,7 +27,7 @@ export function DonateWidget() {
       <div className="stack" style={{ gap: 6 }}>
         <span style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 26 }}>Hold a strand for someone</span>
         <span className="muted" style={{ fontSize: 15 }}>
-          $35 covers one night of safe, supported housing.
+          Help us open our recovery residence — coming soon.
         </span>
       </div>
       <div className="seg" role="group" aria-label="How often">

@@ -14,8 +14,8 @@ export default function Home() {
           </span>
           <h1>Weaving hope into every life.</h1>
           <p className="lead" style={{ maxWidth: 540 }}>
-            We extend a rope of hope to people facing hardship in Lee County — recovery housing, case management and
-            wrap-around care that restores dignity and builds lasting stability.
+            We extend a rope of hope to people facing hardship in Lee County — case management and wrap-around care
+            today, with recovery housing coming soon — restoring dignity and building lasting stability.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
             <Link href="/get-help" className="btn btn-olive">
@@ -91,7 +91,7 @@ export default function Home() {
                 fontWeight: 500,
               }}
             >
-              [Photo: the residence at 1389 N Tamiami Trail — residents or staff, with consent]
+              [Photo: the future residence at 1389 N Tamiami Trail — coming soon]
             </div>
           )}
           <div className="stack" style={{ gap: 24 }}>

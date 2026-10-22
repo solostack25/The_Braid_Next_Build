@@ -17,6 +17,8 @@ export function Footer() {
               />
             </span>
             <span>
+              Recovery residence (coming soon):
+              <br />
               {site.facility.line1}
               <br />
               {site.facility.line2}

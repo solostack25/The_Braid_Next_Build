@@ -42,11 +42,11 @@
   "stats": [
     {
       "value": "28",
-      "label": "Recovery beds"
+      "label": "Recovery beds · coming soon"
     },
     {
       "value": "14",
-      "label": "Private rooms"
+      "label": "Private rooms · coming soon"
     },
     {
       "value": "100+",
@@ -59,7 +59,7 @@
   ],
   "homePhoto": {
     "src": "",
-    "alt": "The Braid's residence at 1389 N Tamiami Trail"
+    "alt": "The Braid's future residence at 1389 N Tamiami Trail"
   },
   "strands": [
     {
@@ -92,12 +92,12 @@
     {
       "slug": "recovery-housing",
       "name": "Recovery Housing & Rapid Re-Housing",
-      "status": "Active",
+      "status": "Coming soon",
       "icon": "home",
       "tint": "olive",
-      "short": "Our 28-bed flagship on N Tamiami Trail, with intensive case management linking residents to healthcare, jobs and education.",
+      "short": "Coming soon: a 28-bed residence on N Tamiami Trail, with intensive case management linking residents to healthcare, jobs and education.",
       "body": [
-        "Our flagship program offers safe, dignified transitional housing with wrap-around services. The residence at 1389 N Tamiami Trail has 14 private rooms (28 beds), an auxiliary building with two more bedrooms, a resource center, a food pantry, and outreach and case management offices.",
+        "Our flagship program will offer safe, dignified transitional housing with wrap-around services. The residence at 1389 N Tamiami Trail is planned to have 14 private rooms (28 beds), an auxiliary building with two more bedrooms, a resource center, a food pantry, and outreach and case management offices. It is not open yet — until it is, our case managers connect people with partner beds.",
         "Placements are coordinated with United Way Lee County, the Lee County Homeless Coalition and the Continuum of Care, with shelter diversion support for people who can stay housed with the right help."
       ],
       "services": [
@@ -111,6 +111,11 @@
         "Transportation assistance",
         "Financial and digital literacy",
         "Family strengthening"
+      ],
+      "needs": [
+        "Funding to open the residence",
+        "Furnishings and household supplies",
+        "Partners and volunteers"
       ]
     },
     {
@@ -222,7 +227,7 @@
     {
       "id": "housing",
       "name": "Recovery Housing",
-      "note": "$35 = one night",
+      "note": "Coming soon — help us open",
       "color": "#4F5B2A",
       "start": 50
     },

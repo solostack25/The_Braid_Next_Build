@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const doors = [
-  { icon: "home", tint: "olive", title: "I need a safe place to stay", text: "Recovery housing and rapid re-housing in Fort Myers." },
+  { icon: "home", tint: "olive", title: "I need a safe place to stay", text: "Our recovery housing is coming soon. Until it opens, we'll connect you with a partner bed." },
   { icon: "baby", tint: "gold", title: "I'm a mom with a baby", text: "Yasamine's Place is opening soon. Reach out now and we'll help in the meantime." },
   { icon: "shield", tint: "olive", title: "I'm not safe at home", text: "Confidential support for domestic violence and trafficking survivors." },
 ] as const;
@@ -93,18 +93,18 @@ export default function GetHelpPage() {
               <strong style={{ fontFamily: "var(--font-display)", fontSize: 32, color: "var(--gold)" }}>{site.intakePhone}</strong>
             )}
             <span style={{ color: "var(--on-dark)", lineHeight: 1.5 }}>
-              Call any time. If we&apos;re full tonight, we&apos;ll connect you with a partner bed.
+              Call any time. Our recovery residence is coming soon. Until then, we&apos;ll connect you with a partner bed.
             </span>
           </div>
           <div className="card stack" style={{ gap: 10, borderRadius: 20 }}>
-            <strong>Walk-in</strong>
+            <strong>Administrative office</strong>
             <span className="muted" style={{ lineHeight: 1.5 }}>
-              {site.facility.line1}
+              {site.office.line1}
               <br />
-              {site.facility.line2}
+              {site.office.line2}
             </span>
             <a
-              href="https://www.google.com/maps/search/?api=1&query=1389+N+Tamiami+Trail+Fort+Myers+FL+33903"
+              href="https://www.google.com/maps/search/?api=1&query=2031+Jackson+Street+Fort+Myers+FL+33901"
               target="_blank"
               rel="noreferrer"
               style={{ fontWeight: 600 }}

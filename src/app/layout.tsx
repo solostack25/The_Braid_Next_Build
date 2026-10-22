@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://thebraidinc.org"),
   title: { default: "The Braid Inc. — Rest, Recover, Rise", template: "%s · The Braid Inc." },
   description:
-    "Recovery housing, case management and wrap-around care for people facing hardship in Fort Myers and Lee County, Florida.",
+    "Case management and wrap-around care for people facing hardship in Fort Myers and Lee County, Florida, with recovery housing coming soon.",
   // Preview build: keep it out of search until it replaces the WordPress site.
   robots: { index: false, follow: false },
   openGraph: {
