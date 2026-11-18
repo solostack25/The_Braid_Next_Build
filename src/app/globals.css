@@ -94,6 +94,17 @@ p { margin: 0; }
 .nav-links { display: flex; gap: 28px; align-items: center; font-weight: 500; font-size: 15px; }
 .nav-links a:not(.btn) { color: var(--ink); text-decoration: none; }
 .nav-links a:not(.btn):hover, .nav-links a[aria-current="page"] { color: var(--olive); text-decoration: underline; text-underline-offset: 6px; }
+.nav-dropdown { position: relative; }
+.nav-dropdown-btn { background: none; border: 0; padding: 8px 0; font: inherit; color: var(--ink); cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+.nav-dropdown-btn:hover, .nav-dropdown-btn[aria-current="page"] { color: var(--olive); text-decoration: underline; text-underline-offset: 6px; }
+.nav-caret { font-size: 12px; transition: transform 0.15s ease; }
+.nav-dropdown[data-open="true"] .nav-caret { transform: rotate(180deg); }
+.nav-dropdown-panel { display: none; position: absolute; top: 100%; left: -16px; min-width: 280px; padding: 10px; background: var(--white); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 18px 40px rgba(47, 58, 31, 0.12); flex-direction: column; z-index: 30; }
+.nav-dropdown[data-open="true"] .nav-dropdown-panel { display: flex; }
+.nav-dropdown-panel a { padding: 10px 12px; border-radius: 10px; }
+.nav-links .nav-dropdown-panel a:not(.btn):hover, .nav-links .nav-dropdown-panel a[aria-current="page"] { background: var(--sand); text-decoration: none; }
+.nav-dropdown-panel .nav-dropdown-all { margin-top: 6px; border-top: 1px solid var(--line); border-radius: 0 0 10px 10px; padding-top: 12px; font-weight: 600; color: var(--olive) !important; }
+.mobile-sub { display: flex; flex-direction: column; }
 .menu-btn { display: none; width: 44px; height: 44px; border: 1px solid var(--line); background: var(--white); border-radius: 10px; align-items: center; justify-content: center; cursor: pointer; color: var(--ink); }
 .mobile-menu { display: none; }
 
@@ -103,6 +114,7 @@ p { margin: 0; }
   .mobile-menu[data-open="true"] { display: flex; flex-direction: column; gap: 4px; padding: 8px 24px 20px; border-top: 1px solid var(--line); background: var(--white); }
   .mobile-menu a:not(.btn) { padding: 12px 0; color: var(--ink); text-decoration: none; font-weight: 500; font-size: 17px; border-bottom: 1px solid var(--sand); }
   .mobile-menu .btn { margin-top: 12px; }
+  .mobile-menu a.mobile-sub-link:not(.btn) { padding: 10px 0 10px 18px; font-size: 15px; color: var(--ink-soft); }
   .brand span { font-size: 15px; }
   .brand img { height: 32px; }
   .section { padding-top: 64px; padding-bottom: 64px; }
