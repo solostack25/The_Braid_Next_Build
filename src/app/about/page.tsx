@@ -20,16 +20,31 @@ export default function AboutPage() {
         </p>
       </div>
 
-      <section className="wrap split" style={{ alignItems: "stretch", gap: 20, marginTop: 24 }}>
-        <div className="card-dark stack" style={{ gap: 12 }}>
+      <section id="mission" className="wrap" style={{ marginTop: 24, scrollMarginTop: 96 }}>
+        <div className="card-dark stack" style={{ gap: 20, borderRadius: 28, padding: "clamp(32px, 6vw, 56px)" }}>
           <span className="eyebrow" style={{ color: "var(--gold)" }}>
-            Mission
+            Mission statement
           </span>
-          <p style={{ fontFamily: "var(--font-display)", fontSize: 26, lineHeight: 1.3 }}>
-            To weave hope, resilience and perseverance through community enrichment, outreach and education —
-            extending a rope of hope through wrap-around services in recovery, housing and life-building skills.
+          <p style={{ fontFamily: "var(--font-display)", fontSize: "clamp(26px, 3.4vw, 36px)", lineHeight: 1.25, maxWidth: 900 }}>
+            Weaving a tapestry of hope, resilience, and perseverance through community enrichment, outreach,
+            education, and empowerment.
           </p>
+          <div className="split" style={{ gap: 32, color: "var(--on-dark)", fontSize: 17, lineHeight: 1.75 }}>
+            <p>
+              The BRAID is dedicated to strengthening individuals, families, and communities by supporting survivors of
+              domestic violence, empowering individuals on their journey to recovery, and advancing human trafficking
+              awareness and prevention.
+            </p>
+            <p>
+              Through compassionate advocacy, education, supportive services, and community partnerships, we strive to
+              break cycles of violence, promote healing, restore dignity, and create pathways toward independence,
+              stability, and lasting change.
+            </p>
+          </div>
         </div>
+      </section>
+
+      <section className="wrap" style={{ marginTop: 20 }}>
         <div className="card stack" style={{ gap: 12, borderRadius: 20 }}>
           <span className="eyebrow">Vision</span>
           <p style={{ fontFamily: "var(--font-display)", fontSize: 26, lineHeight: 1.3 }}>
