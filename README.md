@@ -22,6 +22,16 @@ No environment variables needed.
 | `/about` | Story, mission, vision, values, leadership, partners |
 | `/resources` | Crisis lines, local services, treatment, support groups, online (from the current site) |
 | `/volunteer` | Volunteer roles and partnering |
+| `/house-fund` | The House Fund campaign: progress tracker, where the money goes, FAQ (data in `site.json` → `houseFund`) |
+| `/refer` | How partners refer someone; what we can help with today; our commitments |
+| `/case-management` | Case management in Fort Myers (local search page) |
+| `/yasamines-place` | Yasamine's Place program page |
+| `/housing-interest` | Recovery housing interest list (sends people to the intake portal) |
+| `/news`, `/news/[slug]` | News posts from `src/content/data/posts.json` |
+| `/privacy` | Privacy notice |
+
+The Braid doesn't have its recovery home yet. Site copy frames housing as **raising funds** ("The House Fund"),
+not as a house that exists. Keep it that way until a property is secured.
 
 ## Where the content lives
 
@@ -37,8 +47,12 @@ Colors and fonts are CSS variables at the top of `src/app/globals.css`.
   and `intakePhoneHref`), email, EIN.
 - **Checkout isn't connected.** "Continue to payment" shows a "being connected" notice.
   Hook up Stripe (as on the Wisal site) before taking gifts.
-- **Photo:** the homepage has one labeled placeholder for a photo of the residence
+- **Photo:** the homepage has one labeled placeholder for a team or community photo
   (with consent).
+- **House Fund numbers:** set `houseFund.goal`, `raised`, `donors` and each use's `amount`
+  in `site.json` once The Braid confirms them. While empty, the progress bar is hidden.
+- **Have The Braid review:** case management services list, Yasamine's Place wording,
+  the privacy page (ideally with their counsel), and the two starter news posts.
 - **Logo:** `public/brand/` holds cut-outs from a 1024px image. Ask for the original,
   ideally SVG.
 - **Confirm with The Braid:** volunteer roles, partners named publicly (especially the

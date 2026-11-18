@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Icon } from "@/components/Icon";
-import { programs } from "@/content/site";
+import { pillClass, programs } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Programs",
-  description: "Recovery housing, Rope of Allah, a mobile health clinic and Yasamine's Place mother-baby home.",
+  description: "Case management, Rope of Allah, and the programs we're raising funds to open: recovery housing, a mobile health clinic and Yasamine's Place.",
 };
 
 export default function ProgramsPage() {
@@ -15,7 +15,7 @@ export default function ProgramsPage() {
         <span className="eyebrow">Programs of service</span>
         <h1>Separate services, woven into one plan.</h1>
         <p className="lead">
-          Each program stands on its own. Together they give someone a bed, a plan and a way forward.
+          Each program stands on its own. Together they give someone support, a plan and a way forward.
         </p>
       </div>
 
@@ -27,7 +27,7 @@ export default function ProgramsPage() {
                 <Icon name={p.icon} size={26} />
               </span>
               <h2 style={{ fontSize: "clamp(26px, 4vw, 34px)", flex: "1 1 260px" }}>{p.name}</h2>
-              <span className={`pill ${p.status === "Active" ? "pill-active" : "pill-soon"}`}>{p.status}</span>
+              <span className={pillClass(p.status)}>{p.status}</span>
             </div>
             <div className="split" style={{ gap: 32, alignItems: "start" }}>
               <div className="stack" style={{ gap: 14, fontSize: 17, lineHeight: 1.7, color: "var(--ink-soft)" }}>
@@ -55,9 +55,14 @@ export default function ProgramsPage() {
                       ))}
                     </ul>
                     <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
-                      <Link href="/donate" className="btn btn-gold">
-                        Give
+                      <Link href={p.slug === "recovery-housing" ? "/house-fund" : "/donate"} className="btn btn-gold">
+                        {p.slug === "recovery-housing" ? "Give to The House Fund" : "Give"}
                       </Link>
+                      {p.page && p.slug !== "recovery-housing" && (
+                        <Link href={p.page} className="btn btn-ghost">
+                          Learn more
+                        </Link>
+                      )}
                       <Link href="/volunteer#partner" className="btn btn-ghost">
                         Partner
                       </Link>

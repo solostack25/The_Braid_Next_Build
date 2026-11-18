@@ -1,0 +1,48 @@
+[
+  {
+    "slug": "why-we-are-raising-the-house-fund",
+    "title": "Why we're raising The House Fund",
+    "date": "2026-11-18",
+    "summary": "We don't have our recovery home yet. Here's where things stand, and how your gift helps us get there.",
+    "body": [
+      { "type": "p", "text": "Since The Braid began, our goal has been a safe, dignified recovery home in Lee County — a place where people can rest, recover and rise with real support around them." },
+      { "type": "p", "text": "We want to be straightforward with you: we don't have that home yet. Securing a house takes funding, the right property and approvals, and we're not there. Rather than announce a house before it's ready, we're asking our community to help us build The House Fund." },
+      { "type": "h2", "text": "Where the money goes" },
+      { "type": "ul", "items": [
+        "Securing the house — a down payment or lease, deposits, and the repairs and inspections a recovery home needs.",
+        "Furnishing it — beds, linens, kitchen equipment and household basics.",
+        "First-year support — case management, utilities and operating costs so residents get real help from day one."
+      ] },
+      { "type": "h2", "text": "What happens in the meantime" },
+      { "type": "p", "text": "Our case managers keep working today. We help people make a plan, connect them with partner beds through the Lee County Continuum of Care, and link them to healthcare, benefits and work." },
+      { "type": "h2", "text": "How you can help" },
+      { "type": "p", "text": "Give to The House Fund — once or monthly. Share it with your masjid, church or workplace. And if you know of a property that could become a recovery home, tell us." }
+    ],
+    "cta": { "label": "Give to The House Fund", "href": "/house-fund" }
+  },
+  {
+    "slug": "how-to-refer-someone-to-the-braid",
+    "title": "How to refer someone to The Braid",
+    "date": "2026-11-18",
+    "summary": "A short guide for case managers, providers, faith leaders and families in Lee County.",
+    "body": [
+      { "type": "p", "text": "Many of the people we serve come to us through someone who cared enough to make a call — a case manager, a counselor, an imam or pastor, a nurse, or a family member. Here's how to refer someone." },
+      { "type": "h2", "text": "1. Ask first" },
+      { "type": "p", "text": "Talk with the person and get their permission to share their information with us. A referral works best when the person wants it." },
+      { "type": "h2", "text": "2. Send the referral" },
+      { "type": "p", "text": "Start a request on our secure intake site, or call our intake line. Only The Braid's case managers can see what you send." },
+      { "type": "h2", "text": "3. We take it from there" },
+      { "type": "p", "text": "A case manager reaches out to the person directly. With their consent, we'll keep you updated." },
+      { "type": "h2", "text": "What we can help with today" },
+      { "type": "ul", "items": [
+        "Case management and a personal plan",
+        "Connection to partner beds through the Continuum of Care",
+        "Healthcare, mental health and benefits navigation",
+        "Job readiness and life skills",
+        "Confidential support for domestic violence and trafficking survivors"
+      ] },
+      { "type": "p", "text": "We don't have our own recovery home yet — we're raising The House Fund to secure one. We never pay for referrals, and never accept payment for them." }
+    ],
+    "cta": { "label": "Refer someone", "href": "/refer" }
+  }
+]

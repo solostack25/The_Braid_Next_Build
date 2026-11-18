@@ -15,7 +15,7 @@ export default function Home() {
           <h1>Weaving hope into every life.</h1>
           <p className="lead" style={{ maxWidth: 540 }}>
             We extend a rope of hope to people facing hardship in Lee County — case management and wrap-around care
-            today, with recovery housing coming soon — restoring dignity and building lasting stability.
+            today, while we raise funds to secure our first recovery home — restoring dignity and building lasting stability.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
             <Link href="/get-help" className="btn btn-olive">
@@ -43,6 +43,27 @@ export default function Home() {
               <span className="stat-label">{s.label}</span>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="wrap" style={{ paddingTop: 72 }}>
+        <div className="card split" style={{ borderRadius: 24, padding: "clamp(28px, 5vw, 48px)", gap: 32, alignItems: "center" }}>
+          <div className="stack" style={{ gap: 14 }}>
+            <span className="eyebrow">The House Fund</span>
+            <h2 className="h2">Help us secure a home for recovery.</h2>
+            <p style={{ fontSize: 17, lineHeight: 1.7, color: "var(--ink-soft)" }}>
+              We don&apos;t have our recovery home yet. Every gift to The House Fund goes toward securing, furnishing and
+              staffing a safe place where people in Lee County can rest, recover and rise.
+            </p>
+          </div>
+          <div className="stack" style={{ gap: 12, alignItems: "flex-start" }}>
+            <Link href="/house-fund" className="btn btn-gold">
+              Give to The House Fund
+            </Link>
+            <Link href="/house-fund" style={{ fontWeight: 600 }}>
+              See where the money goes →
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -91,14 +112,14 @@ export default function Home() {
                 fontWeight: 500,
               }}
             >
-              [Photo: the future residence at 1389 N Tamiami Trail — coming soon]
+              [Photo: The Braid team or a community event — with consent]
             </div>
           )}
           <div className="stack" style={{ gap: 24 }}>
             <span className="eyebrow">Why a braid</span>
             <h2 className="h2">One strand frays. Three hold.</h2>
             <p style={{ fontSize: 17, lineHeight: 1.7, color: "var(--ink-soft)" }}>
-              Individual services are stronger when woven together. We don&apos;t just provide a bed — we provide hope,
+              Individual services are stronger when woven together. It&apos;s never just about a roof — it&apos;s hope,
               healing and a pathway to self-sufficiency.
             </p>
             <div className="stack" style={{ gap: 16 }}>

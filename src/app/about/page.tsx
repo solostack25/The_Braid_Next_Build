@@ -14,8 +14,8 @@ export default function AboutPage() {
         <span className="eyebrow">Our story</span>
         <h1>Every person deserves dignity, support and the chance to rise.</h1>
         <p className="lead">
-          The Braid Inc is based in Fort Myers, Florida, and serves Lee County&apos;s most vulnerable people. Our
-          28-bed recovery residence is coming soon, and it is just the beginning: we bring housing, healthcare, education and essential life
+          The Braid Inc is based in Fort Myers, Florida, and serves Lee County&apos;s most vulnerable people. We&apos;re
+          raising funds to secure our first recovery home, and it is just the beginning: we bring housing, healthcare, education and essential life
           skills together, because individual services are stronger when they&apos;re woven together.
         </p>
       </div>

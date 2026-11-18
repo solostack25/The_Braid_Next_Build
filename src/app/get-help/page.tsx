@@ -6,11 +6,11 @@ import { site } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Get help",
-  description: "Recovery housing, mother-baby support and confidential help for survivors in Fort Myers.",
+  description: "Case management, help finding a safe place to stay, mother-baby support and confidential help for survivors in Fort Myers.",
 };
 
 const doors = [
-  { icon: "home", tint: "olive", title: "I need a safe place to stay", text: "Our recovery housing is coming soon. Until it opens, we'll connect you with a partner bed." },
+  { icon: "home", tint: "olive", title: "I need a safe place to stay", text: "We're raising funds for our own recovery home. Until then, we'll connect you with a partner bed." },
   { icon: "baby", tint: "gold", title: "I'm a mom with a baby", text: "Yasamine's Place is opening soon. Reach out now and we'll help in the meantime." },
   { icon: "shield", tint: "olive", title: "I'm not safe at home", text: "Confidential support for domestic violence and trafficking survivors." },
 ] as const;
@@ -93,7 +93,7 @@ export default function GetHelpPage() {
               <strong style={{ fontFamily: "var(--font-display)", fontSize: 32, color: "var(--gold)" }}>{site.intakePhone}</strong>
             )}
             <span style={{ color: "var(--on-dark)", lineHeight: 1.5 }}>
-              Call any time. Our recovery residence is coming soon. Until then, we&apos;ll connect you with a partner bed.
+              Call any time. We don&apos;t have our own recovery home yet, so we&apos;ll connect you with a partner bed.
             </span>
           </div>
           <div className="card stack" style={{ gap: 10, borderRadius: 20 }}>

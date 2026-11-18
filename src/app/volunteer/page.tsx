@@ -8,10 +8,12 @@ export const metadata: Metadata = {
 };
 
 const roles = [
-  { title: "Mentor", text: "Walk alongside a resident as they rebuild — weekly check-ins, encouragement and accountability." },
-  { title: "Cook or serve", text: "Prepare a meal for the house or help stock and run the food pantry." },
-  { title: "Drive", text: "Get residents to appointments, interviews and job sites." },
+  { title: "Mentor", text: "Walk alongside someone as they rebuild — weekly check-ins, encouragement and accountability." },
+  { title: "Help at events", text: "Set up, serve and greet at fundraisers and community events for The House Fund." },
+  { title: "Drive", text: "Get the people we serve to appointments, interviews and job sites." },
   { title: "Teach a life skill", text: "Budgeting, résumés, cooking, digital skills — share what you know." },
+  { title: "Collect supplies", text: "Run a drive for furnishings, linens and household basics for the future home." },
+  { title: "Spread the word", text: "Share The House Fund with your masjid, church, workplace or friends." },
 ];
 
 export default function VolunteerPage() {
@@ -49,8 +51,8 @@ export default function VolunteerPage() {
             </span>
             <h2 className="h2">Agencies, masjids, churches and businesses.</h2>
             <p style={{ color: "var(--on-dark)", fontSize: 17, lineHeight: 1.7 }}>
-              Refer clients, host a speaker event through Rope of Allah, sponsor a room, or help us open Yasamine&apos;s
-              Place and the Mobile Health Clinic.
+              Refer clients, host a speaker event through Rope of Allah, sponsor The House Fund, help us find a
+              property, or help us open Yasamine&apos;s Place and the Mobile Health Clinic.
             </p>
           </div>
           <div className="stack" style={{ gap: 12, alignSelf: "center" }}>
@@ -59,9 +61,14 @@ export default function VolunteerPage() {
               {site.office.line1}, {site.office.line2}
             </strong>
             <span style={{ color: "var(--on-dark)" }}>{site.email}</span>
-            <Link href="/donate" className="btn btn-gold" style={{ alignSelf: "flex-start", marginTop: 8 }}>
-              Sponsor with a gift
-            </Link>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginTop: 8 }}>
+              <Link href="/refer" className="btn btn-gold">
+                Refer someone
+              </Link>
+              <Link href="/house-fund" className="btn btn-ghost" style={{ color: "var(--white)", borderColor: "var(--on-dark)" }}>
+                Sponsor The House Fund
+              </Link>
+            </div>
           </div>
         </div>
       </section>

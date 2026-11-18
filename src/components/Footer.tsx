@@ -16,13 +16,9 @@ export function Footer() {
                 height={99}
               />
             </span>
-            <span>
-              Recovery residence (coming soon):
-              <br />
-              {site.facility.line1}
-              <br />
-              {site.facility.line2}
-            </span>
+            <Link href="/house-fund" style={{ color: "var(--gold)", fontWeight: 600 }}>
+              Help us secure a recovery home →
+            </Link>
             <span>
               Admin office: {site.office.line1}
               <br />
@@ -31,22 +27,27 @@ export function Footer() {
           </div>
           <div className="stack" style={{ gap: 10 }}>
             <strong style={{ color: "var(--white)" }}>Programs</strong>
+            <Link href="/case-management">Case management</Link>
             {programs.map((p) => (
-              <Link key={p.slug} href={`/programs#${p.slug}`}>
+              <Link key={p.slug} href={p.page ?? `/programs#${p.slug}`}>
                 {p.name}
               </Link>
             ))}
           </div>
           <div className="stack" style={{ gap: 10 }}>
             <strong style={{ color: "var(--white)" }}>Get involved</strong>
+            <Link href="/house-fund">The House Fund</Link>
             <Link href="/donate">Donate</Link>
             <Link href="/volunteer">Volunteer</Link>
+            <Link href="/refer">Refer someone</Link>
             <Link href="/volunteer#partner">Partner with us</Link>
             <Link href="/about">About us</Link>
+            <Link href="/news">News</Link>
           </div>
           <div className="stack" style={{ gap: 10 }}>
             <strong style={{ color: "var(--white)" }}>Need help?</strong>
             <Link href="/get-help">Get help now</Link>
+            <Link href="/housing-interest">Recovery housing interest list</Link>
             <Link href="/resources">Crisis lines & resources</Link>
             <span>Call or text 988 any time.</span>
           </div>
@@ -55,7 +56,9 @@ export function Footer() {
           <span>
             © {new Date().getFullYear()} The Braid Inc · 501(c)(3) nonprofit · EIN {site.ein}
           </span>
-          <span>Rest · Recover · Rise</span>
+          <span>
+            <Link href="/privacy">Privacy</Link> · Rest · Recover · Rise
+          </span>
         </div>
       </div>
     </footer>

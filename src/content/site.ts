@@ -23,16 +23,41 @@ export const partners = data.partners;
 export type Program = {
   slug: string;
   name: string;
-  status: "Active" | "Coming soon";
+  status: "Active" | "Coming soon" | "Raising funds";
   icon: "home" | "link" | "health" | "baby" | "shield";
   tint: "olive" | "gold";
   short: string;
   body: string[];
   services?: string[];
   needs?: string[];
+  /** Optional dedicated page for this program. */
+  page?: string;
 };
 
 export const programs: Program[] = data.programs as unknown as Program[];
+
+export function programBySlug(slug: string): Program {
+  const p = programs.find((x) => x.slug === slug);
+  if (!p) throw new Error(`Unknown program: ${slug}`);
+  return p;
+}
+
+export function pillClass(status: Program["status"]): string {
+  if (status === "Active") return "pill pill-active";
+  if (status === "Raising funds") return "pill pill-fund";
+  return "pill pill-soon";
+}
+
+export type HouseFundUse = { name: string; text: string; amount: number | null };
+export type HouseFund = {
+  goal: number | null;
+  raised: number | null;
+  donors: number | null;
+  uses: HouseFundUse[];
+};
+
+/** The House Fund campaign. Leave goal/raised empty until The Braid confirms them. */
+export const houseFund = data.houseFund as unknown as HouseFund;
 
 export const values = data.values;
 

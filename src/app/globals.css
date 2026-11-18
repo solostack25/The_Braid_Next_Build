@@ -63,6 +63,17 @@ p { margin: 0; }
 .pill { font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 999px; white-space: nowrap; }
 .pill-active { background: #ddefe6; color: #1d5b3f; }
 .pill-soon { background: var(--sand); color: var(--ink-soft); }
+.pill-fund { background: #f9eeda; color: #6b5212; }
+.progress { height: 18px; border-radius: 999px; background: var(--sand); overflow: hidden; }
+.progress > span { display: block; height: 100%; background: linear-gradient(90deg, var(--olive), var(--gold)); border-radius: 999px; }
+.prose { max-width: 720px; font-size: 18px; line-height: 1.75; color: var(--ink-soft); }
+.prose h2 { font-family: var(--font-display); font-size: 32px; color: var(--ink); margin: 40px 0 12px; line-height: 1.2; }
+.prose p { margin: 0 0 18px; }
+.prose ul, .prose ol { margin: 0 0 18px; padding-left: 22px; }
+.prose li { margin-bottom: 8px; }
+.faq details { border-bottom: 1px solid var(--line); padding: 18px 0; }
+.faq summary { cursor: pointer; font-weight: 600; font-size: 18px; color: var(--ink); }
+.faq details p { margin: 12px 0 0; color: var(--ink-soft); line-height: 1.7; }
 .icon-tile { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; flex: none; }
 .icon-tile.olive { background: #eaebd9; color: var(--olive); }
 .icon-tile.gold { background: #fbefd9; color: #8a5410; }

@@ -7,10 +7,6 @@
     "intakePhoneHref": "",
     "email": "[EMAIL]",
     "ein": "[EIN]",
-    "facility": {
-      "line1": "1389 N Tamiami Trail",
-      "line2": "Fort Myers, FL 33903"
-    },
     "office": {
       "line1": "2031 Jackson Street",
       "line2": "Fort Myers, FL 33901"
@@ -21,6 +17,10 @@
     {
       "href": "/programs",
       "label": "Programs"
+    },
+    {
+      "href": "/house-fund",
+      "label": "House Fund"
     },
     {
       "href": "/about",
@@ -41,25 +41,25 @@
   ],
   "stats": [
     {
-      "value": "28",
-      "label": "Recovery beds · coming soon"
-    },
-    {
-      "value": "14",
-      "label": "Private rooms · coming soon"
-    },
-    {
       "value": "100+",
       "label": "Lives touched"
     },
     {
+      "value": "8",
+      "label": "Community partners"
+    },
+    {
       "value": "24/7",
       "label": "Support access"
+    },
+    {
+      "value": "1",
+      "label": "Home we're raising funds to secure"
     }
   ],
   "homePhoto": {
     "src": "",
-    "alt": "The Braid's future residence at 1389 N Tamiami Trail"
+    "alt": "The Braid's team and community in Lee County"
   },
   "strands": [
     {
@@ -92,12 +92,12 @@
     {
       "slug": "recovery-housing",
       "name": "Recovery Housing & Rapid Re-Housing",
-      "status": "Coming soon",
+      "status": "Raising funds",
       "icon": "home",
       "tint": "olive",
-      "short": "Coming soon: a 28-bed residence on N Tamiami Trail, with intensive case management linking residents to healthcare, jobs and education.",
+      "short": "We're raising funds to secure a recovery home in Lee County, with intensive case management linking residents to healthcare, jobs and education.",
       "body": [
-        "Our flagship program will offer safe, dignified transitional housing with wrap-around services. The residence at 1389 N Tamiami Trail is planned to have 14 private rooms (28 beds), an auxiliary building with two more bedrooms, a resource center, a food pantry, and outreach and case management offices. It is not open yet — until it is, our case managers connect people with partner beds.",
+        "Our flagship program will offer safe, dignified transitional housing with wrap-around services. We don't have the house yet — we're raising The House Fund to secure, furnish and staff one. Until it opens, our case managers connect people with partner beds.",
         "Placements are coordinated with United Way Lee County, the Lee County Homeless Coalition and the Continuum of Care, with shelter diversion support for people who can stay housed with the right help."
       ],
       "services": [
@@ -113,10 +113,12 @@
         "Family strengthening"
       ],
       "needs": [
-        "Funding to open the residence",
+        "Gifts to The House Fund",
+        "Leads on a suitable property",
         "Furnishings and household supplies",
         "Partners and volunteers"
-      ]
+      ],
+      "page": "/house-fund"
     },
     {
       "slug": "rope-of-allah",
@@ -180,7 +182,8 @@
         "Funding and partners",
         "Baby supplies",
         "Childcare, lactation and mental health professionals"
-      ]
+      ],
+      "page": "/yasamines-place"
     }
   ],
   "values": [
@@ -226,8 +229,8 @@
   "funds": [
     {
       "id": "housing",
-      "name": "Recovery Housing",
-      "note": "Coming soon — help us open",
+      "name": "The House Fund",
+      "note": "Help us secure a recovery home",
       "color": "#4F5B2A",
       "start": 50
     },
@@ -259,5 +262,28 @@
       "color": "#7C8466",
       "start": 0
     }
-  ]
+  ],
+  "houseFund": {
+    "_note": "Fill goal/raised/donors (numbers, no $) when The Braid confirms them. Empty values hide the progress bar.",
+    "goal": null,
+    "raised": null,
+    "donors": null,
+    "uses": [
+      {
+        "name": "Secure the house",
+        "text": "A down payment or lease, deposits, and the repairs and inspections a recovery home needs.",
+        "amount": null
+      },
+      {
+        "name": "Furnish it",
+        "text": "Beds, linens, kitchen equipment and the household basics that make a house a home.",
+        "amount": null
+      },
+      {
+        "name": "First-year support",
+        "text": "Case management, utilities and operating costs so residents get real support from day one.",
+        "amount": null
+      }
+    ]
+  }
 }
