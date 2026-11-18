@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { QuickExit } from "@/components/QuickExit";
-import { site } from "@/content/site";
+import { hasIntakeLine, site } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Recovery housing interest list",
@@ -46,16 +46,27 @@ export default function HousingInterestPage() {
         </div>
         <div className="card-dark stack" style={{ gap: 12, borderRadius: 20, padding: 32 }}>
           <strong style={{ fontFamily: "var(--font-display)", fontSize: 26, color: "var(--white)" }}>Need somewhere tonight?</strong>
-          <p style={{ color: "var(--on-dark)", lineHeight: 1.6 }}>
-            Call our intake line and we&apos;ll connect you with a partner bed. In immediate danger, call 911. Crisis or
-            thoughts of suicide: call or text 988.
-          </p>
-          {site.intakePhoneHref ? (
-            <a href={site.intakePhoneHref} style={{ fontFamily: "var(--font-display)", fontSize: 30, fontWeight: 700, color: "var(--gold)" }}>
-              {site.intakePhone}
-            </a>
+          {hasIntakeLine ? (
+            <>
+              <p style={{ color: "var(--on-dark)", lineHeight: 1.6 }}>
+                Call our intake line and we&apos;ll connect you with a partner bed. In immediate danger, call 911. Crisis or
+                thoughts of suicide: call or text 988.
+              </p>
+              <a href={site.intakePhoneHref} style={{ fontFamily: "var(--font-display)", fontSize: 30, fontWeight: 700, color: "var(--gold)" }}>
+                {site.intakePhone}
+              </a>
+            </>
           ) : (
-            <strong style={{ fontFamily: "var(--font-display)", fontSize: 30, color: "var(--gold)" }}>{site.intakePhone}</strong>
+            <>
+              <p style={{ color: "var(--on-dark)", lineHeight: 1.6 }}>
+                Dial <a href="tel:211" style={{ color: "var(--white)", fontWeight: 600 }}>211</a> (United Way, Lee County)
+                for shelter tonight, and start a confidential request so our case managers can follow up. In immediate
+                danger, call 911. For 24/7 crisis support:
+              </p>
+              <a href="tel:988" style={{ fontFamily: "var(--font-display)", fontSize: 30, fontWeight: 700, color: "var(--gold)" }}>
+                Call or text 988
+              </a>
+            </>
           )}
           <Link href="/resources" style={{ color: "var(--white)", fontWeight: 600 }}>
             Crisis lines and resources →

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Icon } from "@/components/Icon";
 import { QuickExit } from "@/components/QuickExit";
-import { site } from "@/content/site";
+import { hasIntakeLine, site, supportLine } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Get help",
@@ -84,16 +84,14 @@ export default function GetHelpPage() {
 
         <aside className="stack" style={{ flex: "1 1 320px", minWidth: 0, gap: 16 }}>
           <div className="card-dark stack" style={{ gap: 10 }}>
-            <span style={{ color: "var(--on-dark)" }}>24/7 intake line</span>
-            {site.intakePhoneHref ? (
-              <a href={site.intakePhoneHref} style={{ fontFamily: "var(--font-display)", fontSize: 32, fontWeight: 700, color: "var(--gold)" }}>
-                {site.intakePhone}
-              </a>
-            ) : (
-              <strong style={{ fontFamily: "var(--font-display)", fontSize: 32, color: "var(--gold)" }}>{site.intakePhone}</strong>
-            )}
+            <span style={{ color: "var(--on-dark)" }}>{hasIntakeLine ? "24/7 intake line" : "24/7 support"}</span>
+            <a href={supportLine.href} style={{ fontFamily: "var(--font-display)", fontSize: 32, fontWeight: 700, color: "var(--gold)" }}>
+              {hasIntakeLine ? supportLine.label : "Call or text 988"}
+            </a>
             <span style={{ color: "var(--on-dark)", lineHeight: 1.5 }}>
-              Call any time. We don&apos;t have our own recovery home yet, so we&apos;ll connect you with a partner bed.
+              {hasIntakeLine
+                ? "Call any time. We don't have our own recovery home yet, so we'll connect you with a partner bed."
+                : "988 is the free, confidential Suicide & Crisis Lifeline, open 24/7. To reach The Braid's case managers, start a confidential request."}
             </span>
           </div>
           <div className="card stack" style={{ gap: 10, borderRadius: 20 }}>

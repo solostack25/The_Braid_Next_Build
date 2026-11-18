@@ -9,6 +9,17 @@ import data from "./data/site.json";
 
 export const site = data.site;
 
+/**
+ * True once The Braid has its own 24/7 line (intakePhoneHref filled in).
+ * Until then the site points people to 988, the national crisis line.
+ */
+export const hasIntakeLine = Boolean(site.intakePhoneHref);
+
+/** The number shown as the 24/7 line: The Braid's own, or 988 until it has one. */
+export const supportLine = hasIntakeLine
+  ? { label: site.intakePhone, href: site.intakePhoneHref }
+  : { label: "988", href: "tel:988" };
+
 /** Homepage photo beside "One strand frays". Empty src shows a placeholder. */
 export const homePhoto = data.homePhoto;
 

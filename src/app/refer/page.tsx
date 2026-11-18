@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { partners, site } from "@/content/site";
+import { hasIntakeLine, partners, site } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Refer someone",
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const steps = [
   { title: "Ask first", text: "Talk with the person and get their consent to share their information with The Braid." },
-  { title: "Send the referral", text: "Start a request on our secure intake site, or call our intake line. Only our case managers can see it." },
+  { title: "Send the referral", text: "Start a request on our secure intake site. Only our case managers can see it." },
   { title: "We take it from there", text: "A case manager reaches out to the person directly and, with their permission, keeps you updated." },
 ];
 
@@ -50,14 +50,10 @@ export default function ReferPage() {
           <a href={site.intakePortal} className="btn btn-olive">
             Start a secure referral
           </a>
-          {site.intakePhoneHref ? (
+          {hasIntakeLine && (
             <a href={site.intakePhoneHref} className="btn btn-ghost">
               Call {site.intakePhone}
             </a>
-          ) : (
-            <span className="btn btn-ghost" aria-disabled="true">
-              Intake line: {site.intakePhone}
-            </span>
           )}
         </div>
       </section>

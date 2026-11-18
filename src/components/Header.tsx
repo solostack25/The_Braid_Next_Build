@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { nav, programs, site } from "@/content/site";
+import { hasIntakeLine, nav, programs, supportLine } from "@/content/site";
 import { Icon } from "@/components/Icon";
 import { QuickExit } from "@/components/QuickExit";
 
@@ -81,14 +81,11 @@ export function Header() {
       <div className="crisis-bar">
         <div className="wrap">
           <span>
-            In crisis? Call 911. For support call{" "}
-            {site.intakePhoneHref ? (
-              <a href={site.intakePhoneHref} style={{ color: "var(--white)" }}>
-                {site.intakePhone}
-              </a>
-            ) : (
-              site.intakePhone
-            )}
+            In crisis? Call 911.{" "}
+            {hasIntakeLine ? "For support call " : "For 24/7 support, call or text "}
+            <a href={supportLine.href} style={{ color: "var(--white)", fontWeight: 600 }}>
+              {supportLine.label}
+            </a>
             .
           </span>
           <QuickExit />

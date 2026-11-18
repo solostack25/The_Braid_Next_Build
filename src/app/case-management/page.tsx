@@ -56,7 +56,7 @@ export default function CaseManagementPage() {
           <div className="stack" style={{ gap: 14 }}>
             <span className="eyebrow">How it works</span>
             <ol style={{ margin: 0, paddingLeft: 20, lineHeight: 1.8, fontSize: 17, color: "var(--ink-soft)" }}>
-              <li>Start a request online or call our intake line.</li>
+              <li>Start a confidential request on our secure intake site.</li>
               <li>A case manager reaches out at the number or email you choose.</li>
               <li>You make a plan together, and they stay with you as it moves forward.</li>
             </ol>
