@@ -118,7 +118,38 @@
         "Furnishings and household supplies",
         "Partners and volunteers"
       ],
-      "page": "/house-fund"
+      "page": "/programs/recovery-housing",
+      "fund": "housing",
+      "appeal": {
+        "headline": "Help us secure a home for recovery.",
+        "text": "We don't have our recovery home yet. Your gift to The House Fund helps us secure, furnish and staff a safe place where people in Lee County can rest, recover and rise."
+      }
+    },
+    {
+      "slug": "survivors",
+      "name": "Survivor Support",
+      "status": "Active",
+      "icon": "shield",
+      "tint": "olive",
+      "short": "Confidential support and safe referrals for survivors of domestic violence and human trafficking, plus awareness and prevention work in the community.",
+      "body": [
+        "We support survivors of domestic violence and human trafficking with compassion and in confidence — connecting them with safe places, advocates and services, and walking with them toward independence and stability.",
+        "We also work to break cycles of violence through education: raising awareness of domestic violence and trafficking, and helping our community recognize the signs and prevent harm."
+      ],
+      "services": [
+        "Confidential support",
+        "Safe referrals to shelters and partner agencies",
+        "Advocacy",
+        "Help connecting to legal, health and benefits services",
+        "Domestic violence awareness education",
+        "Human trafficking awareness and prevention"
+      ],
+      "page": "/programs/survivors",
+      "fund": "survivors",
+      "appeal": {
+        "headline": "Stand with survivors.",
+        "text": "Your gift funds confidential support, safe referrals and the awareness work that helps prevent domestic violence and human trafficking in Lee County."
+      }
     },
     {
       "slug": "rope-of-allah",
@@ -130,7 +161,13 @@
       "body": [
         "Our faith-based program brings the community into the work: fundraising, speaking at masjids and community centers, national awareness, interfaith dialogue, outreach and education, and building the donor family that keeps our doors open.",
         "The Rope of Allah stands for divine support and human solidarity. Like everything we do, it serves people of every background with dignity and respect."
-      ]
+      ],
+      "page": "/programs/rope-of-allah",
+      "fund": "rope",
+      "appeal": {
+        "headline": "Keep the rope strong.",
+        "text": "Rope of Allah brings masjids, community centers and interfaith partners into this work. Your gift sustains the outreach, education and community that everything else we do stands on."
+      }
     },
     {
       "slug": "mobile-health",
@@ -155,7 +192,13 @@
         "Funding",
         "Healthcare advocacy grants",
         "Medical equipment donations"
-      ]
+      ],
+      "page": "/programs/mobile-health",
+      "fund": "health",
+      "appeal": {
+        "headline": "Bring care to the neighborhoods that need it.",
+        "text": "The Mobile Health Clinic isn't on the road yet. Your gift helps fund the equipment and people to start screenings in underserved parts of Lee County."
+      }
     },
     {
       "slug": "yasamines-place",
@@ -183,7 +226,12 @@
         "Baby supplies",
         "Childcare, lactation and mental health professionals"
       ],
-      "page": "/yasamines-place"
+      "page": "/programs/yasamines-place",
+      "fund": "yasamine",
+      "appeal": {
+        "headline": "Give a mother and her baby a safe start.",
+        "text": "Yasamine's Place isn't open yet. Your gift helps us find a property and prepare a home for single mothers with babies under two."
+      }
     }
   ],
   "values": [
@@ -254,6 +302,20 @@
       "note": "Mothers & babies",
       "color": "#C9714A",
       "start": 25
+    },
+    {
+      "id": "survivors",
+      "name": "Survivor Support",
+      "note": "Domestic violence & trafficking",
+      "color": "#6B7A3A",
+      "start": 0
+    },
+    {
+      "id": "rope",
+      "name": "Rope of Allah",
+      "note": "Outreach & education",
+      "color": "#A88A3A",
+      "start": 0
     },
     {
       "id": "need",

@@ -25,7 +25,7 @@ No environment variables needed.
 | `/house-fund` | The House Fund campaign: progress tracker, where the money goes, FAQ (data in `site.json` → `houseFund`) |
 | `/refer` | How partners refer someone; what we can help with today; our commitments |
 | `/case-management` | Case management in Fort Myers (local search page) |
-| `/yasamines-place` | Yasamine's Place program page |
+| `/programs/[slug]` | One page per program (from `site.json` → `programs`), each with a donation appeal that opens `/donate?fund=<id>` with that program pre-selected. `/yasamines-place` redirects here. |
 | `/housing-interest` | Recovery housing interest list (sends people to the intake portal) |
 | `/news`, `/news/[slug]` | News posts from `src/content/data/posts.json` |
 | `/privacy` | Privacy notice |

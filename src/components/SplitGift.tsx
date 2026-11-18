@@ -12,13 +12,16 @@ const MAX = 500;
 export function SplitGift() {
   const params = useSearchParams();
   const startAmount = Math.min(MAX, Math.max(0, Math.round(Number(params.get("amount")) || 0)));
+  // ?fund=<id> puts the starting amount on that program (program pages link this way).
+  const fundParam = params.get("fund");
+  const startFund = funds.some((f) => f.id === fundParam) ? (fundParam as string) : "housing";
 
   const [freq, setFreq] = useState<Freq>(params.get("freq") === "once" ? "once" : "monthly");
   const [type, setType] = useState<GiftType>("general");
   const [coverFees, setCoverFees] = useState(true);
   const [vals, setVals] = useState<Record<string, number>>(() =>
     Object.fromEntries(
-      funds.map((f) => [f.id, startAmount ? (f.id === "housing" ? startAmount : 0) : f.start])
+      funds.map((f) => [f.id, startAmount ? (f.id === startFund ? startAmount : 0) : f.start])
     )
   );
   const [notice, setNotice] = useState(false);

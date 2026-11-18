@@ -5,7 +5,7 @@ import { pillClass, programs } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Programs",
-  description: "Case management, Rope of Allah, and the programs we're raising funds to open: recovery housing, a mobile health clinic and Yasamine's Place.",
+  description: "Survivor support, Rope of Allah, and the programs we're raising funds to open: recovery housing, a mobile health clinic and Yasamine's Place.",
 };
 
 export default function ProgramsPage() {
@@ -54,43 +54,23 @@ export default function ProgramsPage() {
                         <li key={n}>{n}</li>
                       ))}
                     </ul>
-                    <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
-                      <Link href={p.slug === "recovery-housing" ? "/house-fund" : "/donate"} className="btn btn-gold">
-                        {p.slug === "recovery-housing" ? "Give to The House Fund" : "Give"}
-                      </Link>
-                      {p.page && p.slug !== "recovery-housing" && (
-                        <Link href={p.page} className="btn btn-ghost">
-                          Learn more
-                        </Link>
-                      )}
-                      <Link href="/volunteer#partner" className="btn btn-ghost">
-                        Partner
-                      </Link>
-                    </div>
+                    <Link href="/volunteer#partner" style={{ fontWeight: 600 }}>
+                      Partner with us →
+                    </Link>
                   </div>
                 )}
               </div>
             </div>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginTop: 24, paddingTop: 20, borderTop: "1px solid var(--line)" }}>
+              <Link href={`/programs/${p.slug}#give`} className="btn btn-gold">
+                Give to {p.name}
+              </Link>
+              <Link href={`/programs/${p.slug}`} className="btn btn-ghost">
+                Program page
+              </Link>
+            </div>
           </section>
         ))}
-
-        <section id="survivors" className="card" style={{ scrollMarginTop: 96, borderRadius: 20, padding: "clamp(24px, 4vw, 40px)" }}>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 16, alignItems: "center", marginBottom: 16 }}>
-            <span className="icon-tile olive">
-              <Icon name="shield" size={26} />
-            </span>
-            <h2 style={{ fontSize: "clamp(26px, 4vw, 34px)" }}>Domestic violence & trafficking survivors</h2>
-          </div>
-          <p style={{ fontSize: 17, lineHeight: 1.7, color: "var(--ink-soft)", maxWidth: 760 }}>
-            Confidential support and safe referrals for survivors of domestic violence and human trafficking, and
-            awareness work in the community.
-          </p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginTop: 20 }}>
-            <Link href="/get-help" className="btn btn-olive">
-              Get confidential help
-            </Link>
-          </div>
-        </section>
       </div>
     </div>
   );

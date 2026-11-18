@@ -32,6 +32,10 @@ export type Program = {
   needs?: string[];
   /** Optional dedicated page for this program. */
   page?: string;
+  /** Donation fund id (see `funds`) this program's appeal gives to. */
+  fund?: string;
+  /** Donation appeal shown on the program's page. */
+  appeal?: { headline: string; text: string };
 };
 
 export const programs: Program[] = data.programs as unknown as Program[];

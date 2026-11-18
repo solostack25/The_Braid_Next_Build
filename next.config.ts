@@ -4,7 +4,10 @@ const nextConfig: NextConfig = {
   // Old WordPress addresses. (/programs/, /about/ etc. already redirect to
   // their no-slash versions, which is Next.js's default.)
   async redirects() {
-    return [{ source: "/resources/contact.html", destination: "/get-help", permanent: true }];
+    return [
+      { source: "/resources/contact.html", destination: "/get-help", permanent: true },
+      { source: "/yasamines-place", destination: "/programs/yasamines-place", permanent: true },
+    ];
   },
 };
 
